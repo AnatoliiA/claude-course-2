@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen — Learn AI, clearly</title>
+  <meta name="description" content="Bite-size, beautifully explained lessons on artificial intelligence. No math required.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a href="#" class="logo">Lumen</a>
+      <div class="nav-links">
+        <a href="#lessons">Lessons</a>
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+      </div>
+      <a href="#lessons" class="btn btn-dark">Start learning</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow"><b>●</b>&nbsp; A friendly school for curious minds</p>
+        <h1>Understand AI, <em>one idea</em> at a time.</h1>
+        <p class="lead">Short, beautifully illustrated lessons that explain how modern AI really works, with no jargon and no math degree required.</p>
+        <div class="ctas">
+          <a href="#lessons" class="btn btn-dark">Explore lessons →</a>
+          <a href="#how" class="btn btn-ghost">How it works</a>
+        </div>
+      </div>
+      <img src="images/hero.svg" alt="Illustration of a glowing neural network sphere" width="560" height="560">
+    </div>
+  </header>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="item"><strong>12</strong><span>bite-size lessons</span></div>
+      <div class="item"><strong>0</strong><span>equations required</span></div>
+      <div class="item"><strong>10 min</strong><span>a day is enough</span></div>
+    </div>
+  </div>
+
+  <section id="lessons">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow"><b>01</b> — Foundations</p>
+          <h2>Start with the <em>big ideas</em>.</h2>
+        </div>
+        <p>Three essential lessons that take you from "what even is AI?" to understanding the chat assistants you use every day.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <img src="images/lesson-ml.svg" alt="Scatter plot with a fitted line">
+          <div class="card-body">
+            <div class="meta"><span class="eyebrow"><b>Lesson 01</b></span><span class="eyebrow">6 min</span></div>
+            <h3>What is Machine Learning?</h3>
+            <p>How computers learn patterns from examples instead of following hand-written rules.</p>
+            <a href="#" class="more">Read lesson</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img src="images/lesson-nn.svg" alt="Diagram of a layered neural network">
+          <div class="card-body">
+            <div class="meta"><span class="eyebrow"><b>Lesson 02</b></span><span class="eyebrow">8 min</span></div>
+            <h3>How Neural Networks Think</h3>
+            <p>Layers, weights and signals: the surprisingly simple building blocks behind deep learning.</p>
+            <a href="#" class="more">Read lesson</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img src="images/lesson-llm.svg" alt="Chat bubbles showing word tokens">
+          <div class="card-body">
+            <div class="meta"><span class="eyebrow"><b>Lesson 03</b></span><span class="eyebrow">10 min</span></div>
+            <h3>Inside Large Language Models</h3>
+            <p>Tokens, attention and next-word prediction: what really happens when you chat with AI.</p>
+            <a href="#" class="more">Read lesson</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow"><b>02</b> — How it works</p>
+        <h2 style="margin-top:20px">Learning that <em>sticks</em>.</h2>
+        <ol class="steps">
+          <li><span class="n">i.</span><div><h3>Read a short story</h3><p>Every concept starts with a visual, real-world analogy.</p></div></li>
+          <li><span class="n">ii.</span><div><h3>Play with an idea</h3><p>Interactive diagrams let you poke at how things work.</p></div></li>
+          <li><span class="n">iii.</span><div><h3>Check yourself</h3><p>A quick three-question quiz locks in what you learned.</p></div></li>
+        </ol>
+      </div>
+      <div class="mockup reveal">
+        <img src="images/app-mockup.svg" alt="Mockup of a Lumen lesson quiz screen">
+      </div>
+    </div>
+  </section>
+
+  <section class="quote" id="about">
+    <div class="wrap reveal">
+      <blockquote>"I finally understand what's happening inside the tools I use at work. Lumen made AI feel <em>human</em>."</blockquote>
+      <cite>
+        <div class="avatar"></div>
+        <strong>Maya Okafor</strong><br>
+        <span class="eyebrow">Product designer · Lumen learner</span>
+      </cite>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <div>
+          <p class="eyebrow">Free, forever</p>
+          <h2>Get one <em>clear idea</em> in your inbox each week.</h2>
+        </div>
+        <div>
+          <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
+            <input type="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="form-note">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Lumen. Learn AI, clearly.</span>
+      <div class="links">
+        <a href="#lessons">Lessons</a>
+        <a href="#how">Method</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

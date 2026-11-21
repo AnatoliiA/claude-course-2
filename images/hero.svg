@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" fill="none">
+  <defs>
+    <radialGradient id="orb" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#8C80FF"/>
+      <stop offset="0.55" stop-color="#4B3BFF"/>
+      <stop offset="1" stop-color="#1E1580"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFB38A" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFB38A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14141A" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#14141A" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="300" cy="260" r="250" fill="url(#glow)" opacity="0.6"/>
+
+  <circle cx="280" cy="280" r="250" stroke="url(#ring)" stroke-width="1"/>
+  <circle cx="280" cy="280" r="205" stroke="url(#ring)" stroke-width="1" stroke-dasharray="2 8"/>
+  <ellipse cx="280" cy="280" rx="250" ry="90" stroke="#14141A" stroke-opacity="0.18" transform="rotate(-24 280 280)"/>
+  <ellipse cx="280" cy="280" rx="250" ry="90" stroke="#14141A" stroke-opacity="0.12" transform="rotate(36 280 280)"/>
+
+  <circle cx="280" cy="280" r="140" fill="url(#orb)"/>
+  <circle cx="240" cy="230" r="46" fill="#fff" opacity="0.12"/>
+
+  <!-- network on orb -->
+  <g stroke="#fff" stroke-opacity="0.55" stroke-width="1.2">
+    <line x1="200" y1="250" x2="270" y2="210"/>
+    <line x1="270" y1="210" x2="340" y2="240"/>
+    <line x1="200" y1="250" x2="250" y2="310"/>
+    <line x1="270" y1="210" x2="250" y2="310"/>
+    <line x1="340" y1="240" x2="320" y2="330"/>
+    <line x1="250" y1="310" x2="320" y2="330"/>
+    <line x1="340" y1="240" x2="250" y2="310"/>
+    <line x1="320" y1="330" x2="290" y2="380"/>
+    <line x1="250" y1="310" x2="290" y2="380"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="200" cy="250" r="5"/>
+    <circle cx="270" cy="210" r="6"/>
+    <circle cx="340" cy="240" r="5"/>
+    <circle cx="250" cy="310" r="7"/>
+    <circle cx="320" cy="330" r="5"/>
+    <circle cx="290" cy="380" r="4"/>
+  </g>
+
+  <!-- orbiting satellites -->
+  <circle cx="58" cy="370" r="10" fill="#FFB38A"/>
+  <circle cx="506" cy="186" r="14" fill="#14141A"/>
+  <circle cx="452" cy="452" r="6" fill="#4B3BFF"/>
+  <circle cx="120" cy="120" r="5" fill="#14141A"/>
+
+  <!-- floating label chips -->
+  <g font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500">
+    <rect x="396" y="88" width="128" height="36" rx="18" fill="#fff" stroke="#14141A" stroke-opacity="0.1"/>
+    <circle cx="416" cy="106" r="5" fill="#4B3BFF"/>
+    <text x="430" y="111" fill="#14141A">Neural nets</text>
+    <rect x="30" y="440" width="136" height="36" rx="18" fill="#14141A"/>
+    <circle cx="50" cy="458" r="5" fill="#FFB38A"/>
+    <text x="64" y="463" fill="#F6F3EE">Transformers</text>
+  </g>
+</svg>
