@@ -1,4 +1,28 @@
-# Task: Push the project to GitHub
+# Task: Make the GitHub repo public
+
+## Findings
+- Repo `AnatoliiA/claude-course-2` is currently private.
+- Pre-publish scan: no secrets, tokens or Salesforce org IDs in tracked files.
+- Both commits carry the author email `kamaralia@gmail.com`, which becomes publicly visible once the repo is public.
+
+## Checklist
+- [x] User approves: hide the email first, then make the repo public
+- [x] Set this repo's `user.email` to `13355525+AnatoliiA@users.noreply.github.com`
+- [x] Rewrite the existing commits' author/committer email to the noreply address, keeping their dates
+- [x] Check that no commit still uses the old email, then force-push `main`
+- [x] Run `gh repo edit AnatoliiA/claude-course-2 --visibility public --accept-visibility-change-consequences`
+- [x] Verify with `gh repo view --json visibility` (shows `PUBLIC`)
+- [x] Add a review section, then commit and push this file
+
+## Review
+- **Commits rewritten:** both commits (now `1021279` and `f1b27fb`) use the noreply email instead of the personal one. Their content and dates are unchanged, and `main` was force-pushed.
+- **Future commits:** the local git config for this repo (`user.email`) is set to the noreply address, so they won't expose the personal email either. The global git config is unchanged.
+- **Visibility:** the repo is now **public** at https://github.com/AnatoliiA/claude-course-2.
+- **For the user:** turn on GitHub Settings → Emails → "Keep my email addresses private" (and optionally "Block command line pushes that expose my email").
+
+---
+
+# Previous task: Push the project to GitHub (done)
 
 ## Findings
 - Local git repo on `main`, no commits yet, no remote configured.
