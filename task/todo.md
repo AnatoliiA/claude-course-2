@@ -1,4 +1,20 @@
-# Task: Make the GitHub repo public
+# Task: Enable GitHub Pages
+
+Approved by the user ("yes enable GitHub Pages").
+
+- [x] Enable Pages via the API, serving from branch `main`, folder `/` (root, where `index.html` lives)
+- [x] Wait for the first build to finish (status `built`)
+- [x] Verify the live URL returns the page, and that the CSS and images load (all HTTP 200)
+- [x] Add a review section, then commit and push this file
+
+## Review
+- **Live site:** https://anatoliia.github.io/claude-course-2/
+- **How it's published:** from `main` at the repo root, with no build step. Each push to `main` re-deploys automatically within a minute or two.
+- **Checked:** `/`, `/css/styles.css`, `/images/hero.svg` and `/images/app-mockup.svg` all return HTTP 200, so the relative paths work under the `/claude-course-2/` subpath.
+
+---
+
+# Previous task: Make the GitHub repo public (done)
 
 ## Findings
 - Repo `AnatoliiA/claude-course-2` is currently private.
