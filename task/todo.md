@@ -104,7 +104,7 @@ Decisions: repo `claude-course-2`, **private**, `.sf/` excluded.
 - [x] User re-authenticates: `! gh auth login -h github.com`
 - [x] Add `.gitignore` excluding `.sf/` (plus OS junk like `Thumbs.db`, `.DS_Store`)
 - [x] Stage website files + `CLAUDE.md` + `task/` + `.gitignore`
-- [x] Create initial commit on `main` (`60023bf`)
+- [x] Create initial commit on `main` (`1021279`; originally `60023bf`, its ID changed when the commit emails were rewritten)
 - [x] Create private GitHub repo `claude-course-2` and push with `gh repo create claude-course-2 --private --source . --push`
 - [x] Verify: `git remote -v`, `git log`, and open the repo URL
 - [x] Add review section to this file
@@ -112,7 +112,7 @@ Decisions: repo `claude-course-2`, **private**, `.sf/` excluded.
 ## Review
 - **Repo:** https://github.com/AnatoliiA/claude-course-2 (private), with `origin` set and `main` tracking `origin/main`.
 - **Added `.gitignore`:** excludes `.sf/` (Salesforce CLI data), `Thumbs.db` and `.DS_Store`.
-- **Commits:** the initial commit `60023bf` (website, CSS, images, `CLAUDE.md`, `task/`), then a follow-up commit with this finished checklist.
+- **Commits:** the initial commit `1021279` (website, CSS, images, `CLAUDE.md`, `task/`), then a follow-up commit with this finished checklist.
 - **Not pushed:** the `.sf/` folder, which stays on this machine only.
 
 ---
