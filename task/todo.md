@@ -20,7 +20,7 @@ Approved by the user, including the `.history/` option.
 - **`.history/`:** the 7 backup files are unstaged and ignored. They are still on disk.
 - **Checks:** `git ls-files -ci --exclude-standard` returns nothing, so no committed file is affected by the new rules. `git status` shows only `.gitignore` and `task/todo.md` (modified) and `CLAUDE.md` (staged by the user earlier).
 - **Security:** the new `.env` / `.env.*` rules guard against committing secrets. Nothing sensitive was added to any file.
-- **Not done:** no commit or push.
+- **Committed and pushed:** in `9d7df3b` at the user's request, together with the `CLAUDE.md` security-review rule.
 
 ---
 
