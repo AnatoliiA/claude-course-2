@@ -1,3 +1,51 @@
+# Salesforce CLI data (contains org details; never commit)
 .sf/
-Thumbs.db
+
+# Git documentation
+git.md
+
+# Editor local history (VS Code "Local History" extension backups)
+.history/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+*.orig
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Operating system files
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Build files
+dist/
+build/
+*.egg-info/
+
+# Local temporary directories
+tmp/
+temp/

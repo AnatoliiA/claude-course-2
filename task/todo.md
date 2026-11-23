@@ -1,4 +1,56 @@
-# Task: Enable GitHub Pages
+# Task: Keep `git.md` out of Git and expand `.gitignore`
+
+Approved by the user, including the `.history/` option.
+
+## Findings
+- `git.md` is **untracked** (never committed or staged), so `git rm --cached git.md` would fail with "pathspec did not match". Ignoring it in `.gitignore` is enough.
+- The current `.gitignore` has `.sf/`, `Thumbs.db` and `.DS_Store`. The pasted list doesn't include `.sf/`, but it must stay because that folder holds Salesforce org data.
+
+## Checklist
+- [x] Merge the pasted rules into `.gitignore`: keep `.sf/`, add every pasted section, and don't duplicate `Thumbs.db` or `.DS_Store`
+- [x] Add `.history/` and unstage the 7 `.history/CLAUDE_*.md` files with `git restore --staged .history`
+- [x] Verify: `git check-ignore -v git.md` shows the rule, and `git status` no longer lists `git.md`
+- [x] Check that no tracked file is now ignored (`git ls-files -ci --exclude-standard`)
+- [x] Security review, then add a review section to this file
+- No commit or push unless asked
+
+## Review
+- **`.gitignore`:** now holds `.sf/` (kept), `git.md`, `.history/`, plus all the pasted sections: temp files, logs, cache, IDE settings, OS files, env/secrets (with `!.env.example` allowed) and build and temp directories. `Thumbs.db` and `.DS_Store` appear only once.
+- **`git.md`:** ignored by `.gitignore` line 5. It stays on disk and no longer shows in `git status`. `git rm --cached` wasn't needed because the file was never tracked.
+- **`.history/`:** the 7 backup files are unstaged and ignored. They are still on disk.
+- **Checks:** `git ls-files -ci --exclude-standard` returns nothing, so no committed file is affected by the new rules. `git status` shows only `.gitignore` and `task/todo.md` (modified) and `CLAUDE.md` (staged by the user earlier).
+- **Security:** the new `.env` / `.env.*` rules guard against committing secrets. Nothing sensitive was added to any file.
+- **Not done:** no commit or push.
+
+---
+
+# Previous task: Create `git.md` Git management guide (done)
+
+Approved by the user ("yes go ahead").
+
+- [x] Create `git.md` at the repo root with these sections:
+  - [x] Branch management: create, switch, merge and delete branches (local and remote)
+  - [x] Naming conventions: `main` is the main branch, `feature/feature-name` for new features (lowercase, hyphens)
+  - [x] Feature workflow: branch from an up-to-date `main`, commit, keep the branch in sync, merge back into `main`, push, clean up
+  - [x] Verification commands, each with an example and sample output: `git status`, `git diff`, `git diff --staged`, `git log --oneline`, `git branch`, `git branch -a`
+  - [x] Quick-reference table at the end
+- [x] Security review: no personal data (emails, tokens) in the examples
+- [x] Add a review section to this file
+- Not included: committing or pushing. The repo is public and served on GitHub Pages, so this only happens if the user asks.
+
+## Review
+- **New file `git.md`** at the repo root, with 5 sections and a table of contents:
+  1. **Branch management:** create (`git switch -c`), switch (`git switch`, `git switch -`, `git stash`), merge (fast-forward vs three-way, `--no-ff`, resolving conflicts, `--abort`), delete (`-d`, `-D`, the remote branch) and rename (`-m`).
+  2. **Naming conventions:** `main` and `feature/feature-name`, with a table of good and bad names.
+  3. **Feature workflow:** 7 steps from updating `main` to cleaning up, with both a local merge and a GitHub PR as ways to merge. Also includes commit-message tips and a note that pushing `main` re-deploys GitHub Pages.
+  4. **Verification commands:** all 6 requested commands, each with an explanation, an example and sample output, plus useful variations (`-s`, `-v`, `--graph --all`, `main..HEAD`, `-r`, `--merged`, `fetch --prune`).
+  5. **Quick-reference table.**
+- **Security review:** a grep for emails, tokens, passwords, usernames and personal paths found nothing. The only `@` characters are diff hunk headers (`@@`). All hashes, file names and sample output are made up.
+- **Not changed:** no other files except this log. Nothing was committed or pushed.
+
+---
+
+# Previous task: Enable GitHub Pages (done)
 
 Approved by the user ("yes enable GitHub Pages").
 

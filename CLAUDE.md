@@ -18,3 +18,7 @@
    - Keep the project structured.
    - Make debugging easier.
    - Ensure the user stays in control of the code generation process.
+
+   ######## after all code generation, always perform a security review of the code.
+   Go through the code you just wrote and confirm it follows security best practices. Check that no sensitive data is left in the front end and that there are no vulnerabilities an attacker could exploit."
+
