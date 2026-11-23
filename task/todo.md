@@ -12,7 +12,7 @@ Approved by the user, including the `.history/` option.
 - [x] Verify: `git check-ignore -v git.md` shows the rule, and `git status` no longer lists `git.md`
 - [x] Check that no tracked file is now ignored (`git ls-files -ci --exclude-standard`)
 - [x] Security review, then add a review section to this file
-- No commit or push unless asked
+- [x] Committed and pushed at the user's request
 
 ## Review
 - **`.gitignore`:** now holds `.sf/` (kept), `git.md`, `.history/`, plus all the pasted sections: temp files, logs, cache, IDE settings, OS files, env/secrets (with `!.env.example` allowed) and build and temp directories. `Thumbs.db` and `.DS_Store` appear only once.
